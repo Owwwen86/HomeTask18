@@ -320,4 +320,4 @@ if __name__ == '__main__':
 
     configure_app(app)
 
-    app.run()
+    app.run(host="localhost", port=10001, debug=True)
