@@ -47,7 +47,7 @@ class MovieView(Resource):
     def put(self, mid):
         data = request.json
         try:
-            movie_service.update(data)
+            movie_service.update(data, mid)
             return "Данные обновлены", 201
         except Exception:
             db.session.rollback()

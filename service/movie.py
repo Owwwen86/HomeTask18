@@ -34,10 +34,10 @@ class MovieService:
 
         return self.dao.create(movie)
 
-    def update(self, data):
-        mid = data.get('id')
+    def update(self, data, mid):
         movie = self.get_one(mid)
 
+        movie.id = mid
         movie.title = data.get('title')
         movie.description = data.get('description')
         movie.year = data.get('year')
